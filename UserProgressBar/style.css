@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'ubuntu';
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: #f4f4f4;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;  
+    padding: 1rem;  
+}
+
+.testimonial-container{
+    background-color: #476ce4;
+    color: #fff;
+    border-radius: 1.5rem;
+    margin: 2rem auto;
+    padding: 4rem 6rem;
+    max-width: 76.8rem;
+    width: 67vw;
+    position: relative;
+    height: 50vh;
+
+}
+.fa-quote{
+    color: rgba(255,255,255,0.3);
+    font-size: 2rem;
+    position: absolute;
+    top: 5rem;
+
+}
+
+.fa-quote-right{
+    left: 5rem;
+}
+.fa-quote-left{
+    right: 5rem;
+}
+
+.user .user-image{
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    /* object-fit: cover; */
+
+
+}
+
+.user-details{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.userName{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+.role{
+    margin-bottom: .5rem;
+    color: rgb(240, 240, 240);
+    font-size: 1.1rem;
+}
+
+.progress-bar{
+    background-color: #fff;
+    height: .2rem;
+    width: 100%;
+    animation: grow 4.9s linear infinite;
+    transform-origin: left;
+
+}
+
+@keyframes grow {
+    
+    0%{
+        transform: scaleX(0);
+    }
+
+}
+
+.testimonial{
+    line-height: 2.4rem;
+    font-size: 1.1rem;
+    text-align: justify;
+    margin: 2.5rem auto;
+    color:#fff;
+    word-spacing: .1rem;
+}
+.user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+@media(max-width : 56.8rem){
+    .testimonial-container{
+        padding: 2rem 3rem;
+
+    }
+    .fa-quote{
+        display: none;
+    }
+}

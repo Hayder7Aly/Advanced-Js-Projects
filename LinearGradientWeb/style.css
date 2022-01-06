@@ -1,0 +1,406 @@
+@font-face {
+  font-family: Poppins;
+  src: url("Poppins/Poppins-Light.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+  color: #333;
+  user-select: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  background-color: #f6f6f6;
+  overflow-x: hidden;
+  padding: 2rem 1rem;
+
+}
+
+.load{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.circle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  border-top: rgb(159, 42, 255) solid .3rem;
+  border-left: #fd31dbe3 solid .3rem;
+  border-right: #3ccc33 solid .3rem;
+  animation: rotate 1.3s linear infinite;
+}
+
+.circle::before{
+  content: '';
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%); */
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  border-top: rgb(255, 29, 210) solid .3rem;
+  border-bottom: #ff3c00e3 solid .3rem;
+  animation: rotate 1.3s linear infinite;
+}
+
+.circle::after{
+  content: '';
+  position: absolute;
+  /* top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%); */
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border-top: rgb(255, 29, 210) solid .3rem;
+  border-bottom: #ff3c00e3 solid .3rem;
+  animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+  0%{
+    transform: rotate(360deg)
+  }
+  
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.box {
+  cursor: pointer;
+  flex-basis: 45rem;
+  flex-grow: .2;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  box-shadow: 0 0.1rem 0.4rem 0.1rem hsla(0, 0%, 0%, 0.1);
+  border-radius: 1.7rem;
+  padding: 2rem;
+  transition: box-shadow 0.25s ease 0s, transform 0.25s ease 0s,
+    transform 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s,
+    opacity 0.5s cubic-bezier(0.6, 0.2, 0.1, 1) 0s;
+  display: flex;
+  flex-direction: column;
+}
+
+.box:hover {
+  box-shadow: 5px 12px 20px rgb(36 37 38 / 13%);
+}
+
+.colorInfo{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+
+ .box:nth-child(5n + 0) {
+  flex-basis: 90rem;
+  flex-grow: .8;
+
+}
+
+.aboutColor {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aboutColor #colorId {
+  font-size: 1.2rem;
+  font-family: "Ubuntu";
+  font-weight: 600;
+}
+
+.aboutColor #colorId span {
+  font-family: "Poppins";
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-left: 1rem;
+}
+.fa{
+  cursor: pointer;
+}
+.aboutColor .aboutBtn {
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: 0.1rem solid #f6f6f6;
+  transition: all 0.3s linear;
+}
+
+.aboutColor .aboutBtn:hover {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.aboutColor .aboutBtn i {
+  color: #333;
+  font-size: 1.3rem;
+}
+
+
+.colorContent{
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundedbox {
+  position: relative;
+  border-radius: 50%;
+  opacity: 0.8;
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: 'Poppins';
+  font-weight: 500;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+
+.roundedbox.active{
+
+  animation: heartBeat 1s linear infinite alternate;
+}
+
+@keyframes heartBeat {
+  0%{transform: scale(1);}
+  50%{transform: scale(1.05);}
+  100%{transform: scale(1);}
+
+
+}
+
+
+
+
+.colorInfo{
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.colorCode span {
+  font-size: 2rem;
+}
+
+.colorInfo .colorCode {
+  font-size: 1.4rem;
+  color: rgb(67, 67, 67);
+}
+
+.copy {
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #333;
+}
+
+.copy::before {
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  height: 0.1rem;
+  width: 20%;
+  background-color: #333;
+  transition: all 0.3s linear;
+}
+
+.copy:hover:before {
+  width: 100%;
+}
+
+.upBtn{
+    outline: none;
+    border: none;
+    position: fixed;
+    bottom: 3rem;
+    left: .5rem;
+    width: 3rem;
+    height: 3rem;
+    background: #333;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.upBtn:hover{
+    box-shadow: 0 0 1rem rgba(0,0,0,.2);
+}
+
+.upBtn:active{
+    transform: scale(.98);
+}
+
+.fa-arrow-up{
+    color: #ffff;
+    
+
+} 
+
+.block {
+  display: none;
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 0rem;
+  left: 0.6rem;
+  z-index: 99;
+  font-size: 1.4rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(148deg,#3ccc33 0%, #3cedaf 100%);
+  cursor: pointer;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#topBtn.active {
+  bottom: 2rem;
+  visibility: visible;
+  opacity: 1;
+}
+
+#topBtn:hover {
+  background-color: #685757;
+}
+
+#topBtn:active {
+  transform: scale(0.8);
+}
+
+#topBtn i.fa-arrow-up {
+  color: #fff;
+  animation: upDown 0.5s ease-in-out infinite alternate;
+}
+
+
+.notify{
+  position: fixed;
+  top: .2rem;
+  right: -25rem;
+  width: 25rem;
+  height: 6rem;
+  border-radius: .5rem;
+  /* background-color: rgb(181, 179, 179); */
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+
+.progress{
+  position: absolute;
+  top: .2rem;
+  left: 0;
+  width: 100%;
+  height: .2rem;
+  background-color: #fff;
+}
+
+
+
+.notify.active .progress{
+  
+  animation: progres 2.5s linear;
+}
+
+@keyframes progres {
+  0%{
+    width: 0;
+  }
+  30%{
+    width: 30%;
+  }
+  60%{
+    width: 60%;
+  }
+  100%{
+    width: 100%;
+  }
+  
+}
+
+.notify .notifyTxt{
+  font-size: 1.3rem;
+  /* color: #666; */
+  color: #fff;
+  padding: 1rem 1rem;
+  font-weight: 600;
+}
+
+.notify.active{
+  right: 1rem;
+}
+
+
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .box{
+    padding: 1rem .5rem;
+  }
+} 

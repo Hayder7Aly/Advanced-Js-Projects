@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("./Poppins/Poppins-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 4rem 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  position: relative;
+}
+header .logo h1 {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 770;
+  text-transform: uppercase;
+}
+
+header .toggle {
+  width: 2rem;
+  height: 2em;
+  background: url("img/menu.png");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  filter: invert(1);
+  z-index: 10000;
+}
+
+header .toggle.active {
+  background: url("img/close.png");
+  background-size: cover;
+  background-position: center;
+}
+
+section {
+  padding: 10rem 7rem;
+  width: 100%;
+  height: 100vh;
+}
+
+section .content {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+section .content .box {
+  position: relative;
+  width: 25rem;
+  min-height: 45rem;
+  margin:0 1rem;
+  overflow: hidden;
+}
+
+section .content .box.active {
+  animation: animate 150ms linear forwards;
+  width: 100%;
+  min-height: 100%;
+  visibility: hidden;
+
+}
+
+section .content .box.active img:hover{
+   transform: scale(1);
+}
+
+@keyframes animate {
+
+    0%{
+        visibility: visible;
+        transform: scale(.3);
+        opacity: .3;
+    }
+    50%{
+        visibility: visible;
+        transform: scale(.6);
+        opacity: .6;
+    }
+    100%{
+        visibility: visible;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+}
+
+section .content .box.active img {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section .content .box.stay {
+  display: none;
+}
+
+section .content .box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: 350ms;
+  transition-delay: 50ms;
+}
+
+section .content .box img:hover {
+  transform: scale(1.2);
+}
+
+section .footer {
+  min-height: 8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section .footer .social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section .footer .social li {
+  list-style-type: none;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: 250ms;
+}
+
+section .footer .social li:hover {
+  transform: rotate(360deg);
+}
+
+section .footer .social li i {
+  font-size: 2rem;
+}

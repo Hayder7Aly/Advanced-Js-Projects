@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #9e9e9e;
+}
+.container {
+  background-color: #49465a;
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+  color: #b9c5ff;
+}
+.container h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.container a {
+  text-decoration: none;
+  color: lightblue;
+}
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  background: lightblue;
+  padding: 1.5rem;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: 0;
+  border-radius: 0.5rem;
+}
+.btn:focus {
+  outline: none;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.text {
+  margin-top: 3rem;
+}
+.formControl {
+  position: relative;
+  margin: 2rem 0 4rem;
+  width: 30rem;
+}
+.formControl input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #fff;
+  display: block;
+  width: 100%;
+  padding: 1rem 0;
+  font-size: 1.8rem;
+  color: #fff;
+}
+.formControl input:focus,
+.formControl inptu:valid {
+  outline: none;
+  border-bottom-color: lightblue;
+}
+.formControl label {
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+}
+.formControl label span {
+  display: inline-block;
+  font-size: 1.3rem;
+  min-width: 0.5rem;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.formControl input:focus + label span,
+.formControl input:valid + label span {
+  color: lightblue;
+  transform: translateY(-3rem);
+}

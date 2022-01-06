@@ -1,0 +1,213 @@
+@font-face {
+  font-family: Poppins;
+  src: url("Poppins/Poppins-Light.ttf");
+}
+/* global Setting  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 250ms;
+  outline: none;
+  border: none;
+  font-family: 'Poppins';
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #eee;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    box-shadow: 0 0 5rem rgba(0, 0, 0, .2);
+    z-index: 1000;
+}
+
+header img{
+    height: 5rem;
+}
+
+header p{
+    cursor: pointer;
+    color: #333;
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+header .navigation{
+    position: relative;
+}
+
+header .navigation a{
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 1.4rem;
+    font-weight: 540;
+    color: #444;
+}
+header .navigation a:hover{
+    color: #999;
+}
+header .navigation .btn{
+    padding: 1rem 2rem;
+    background-color: #444;
+    border: .1rem solid #444;
+    color: #fff;
+    border-radius: 5rem;
+}
+
+header .navigation .btn:hover{
+    color: #222;
+    background-color: transparent;
+}
+
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  padding: 5rem 2.5rem;
+  padding-top: 12rem;
+}
+
+.container .box {
+  height: 30rem;
+  color: #000;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  animation: animate 400ms linear forwards;
+  transform-origin: top;
+}
+
+@keyframes animate {
+    0%{
+        transform: scaleX(0);
+    }
+    100%{
+        transform: scaleX(1);
+    }
+}
+
+.container .box:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
+    0 1rem 2rem rgba(0, 0, 0, 0.05), 
+    0 1.5rem 3rem rgba(0, 0, 0, 0.05),
+    0 2rem 5rem rgba(0, 0, 0, 0.05);
+}
+
+.container .box span {
+  font-size: 6rem;
+}
+
+.container .box:hover span{
+    animation: emojie 350ms linear infinite alternate;
+
+}
+
+@keyframes emojie {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(2rem);
+    }
+    
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 1.2rem 0;
+    background-color: #fff;
+}
+
+footer .copyright{
+    font-size: 1.4rem;
+    color: #555;
+}
+
+
+
+@media (max-width: 940px) {
+  .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 630px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+
+}
+@media (max-width: 800px) {
+
+    header .navigation{
+        position: fixed;
+        right: -100%;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: flex-start;        
+        padding-left: 10%;
+        background-color: rgba(255,255,255,.9);
+        }
+
+    header .navigation a{
+        margin: 2rem 0;
+    }
+
+    header .navigation.active{
+        right: 0;
+    }
+
+    header  .toggle{
+        background: url('img/menu.png');
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: cover;
+        background-position: center;
+        filter: invert(1);
+        z-index: 10000;
+    }
+    header  .toggle.active{
+        background: url('img/close.png');
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: cover;
+        background-position: center;
+    }
+
+}
+
+
+@media (max-width : 350px) {
+  .container{
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  
+}

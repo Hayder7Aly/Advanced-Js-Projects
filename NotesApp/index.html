@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.min.css" />
+    <link rel="stylesheet" href="styel.css" />
+    <title>🗒️ NotesApp</title>
+  </head>
+  <body>
+
+    <div class="components">
+      <button class="delAll" id="delAll">
+        <i class="fas fa-trash-alt"></i>
+        Clear notes
+      </button>
+
+      <div class="searchBar">
+        <i class="fas fa-search" class="searchIcon"></i>
+        <input
+          type="text"
+          id="search"
+          class="search"
+          placeholder="Search"
+          autocomplete="off"
+        />
+      </div>
+
+      <div>
+        <button class="add" id="add">
+          <i class="fas fa-plus"></i>
+          Add note
+        </button>
+      </div>
+    </div>
+
+
+    <script src="marked-master/marked.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

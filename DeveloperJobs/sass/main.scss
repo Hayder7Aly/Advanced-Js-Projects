@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+html::-webkit-scrollbar{
+    width: 1.3rem;
+}
+
+html::-webkit-scrollbar-thumb{
+    background-color: #faac04;
+    border-radius: 5rem;
+
+}
+html::-webkit-scrollbar-track{
+    background-color: #11121A;
+}
+
+
+::selection{
+    background-color: #faac04;
+    color: #fff;
+}
+
+body{
+    position: relative;
+    margin: 0;
+    color: #fff;
+    background-color: #11121A;
+}
+
+header{
+    background: #1C1C24;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+
+}
+ header .header-contianer{
+    max-width: 110rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5rem;
+
+}
+.header-contianer .logo{
+    height: 4rem;
+    cursor: pointer;
+}
+
+.header-contianer .logo img{
+    height: 100%;
+    filter: invert(1);
+}
+
+.search{
+    width: 100%;
+    max-width: 100rem;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+
+}
+
+.search-container{
+    background-color: #1C1C24;
+    height: 5rem;
+    border-radius: 1rem;
+    border: .1rem solid #222328;
+    display: flex;
+    overflow: hidden;
+
+}
+
+.input-container{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    flex-grow:1;    
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    font-weight: 600;
+
+}
+
+.input-container i{
+    font-size: 1.8rem;
+    margin-left: 2.5rem;
+}
+
+.button-container{
+    // background-color: #3060FF;
+    background-color: #de9b0c;
+    width: 10rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 250ms;
+
+
+}
+.button-container:hover{
+    background-color: #faac04;
+}
+
+.button-container span{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.jobs-list{
+
+    max-width: 100rem;
+    background-color: #11121A;
+    width: 100%;
+    // height: 100vh;
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.5rem;
+
+}
+
+
+.jobs-list h1{
+    margin: 1rem 0;
+    margin-left: 2.5rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.jobs-container{
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-template-rows: repeat(3 , 1fr);
+    background-color: #11121A;
+}
+
+.job-tile{
+    background-color: #1C1C24 ;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #fff;
+    padding: 3rem;
+    transition: 250ms;
+    margin-bottom: 2rem;
+
+}
+
+.job-tile.show{
+    display: flex;
+    animation: growUp 250ms linear forwards;
+    transform-origin: top;
+}
+
+@keyframes growUp {
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(1);
+    }
+
+    
+}
+
+.job-tile.none{
+    display: none;
+}
+
+
+.job-tile:hover{
+    background-color: #23232b ;
+ 
+}
+
+.top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.rolename{
+    padding: 2rem 0rem;
+}
+.rolename span{
+    font-size: 1.8rem;
+}
+
+.description{
+    height: 10.5rem;
+    flex-grow: 1;
+}
+
+.description p{
+    font-size: 1.3rem;
+    color: #96939B;
+    text-overflow: ellipsis;
+}
+
+.buttons{
+
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    height: 4.5rem;
+    width: 100%;
+
+}
+
+.button{
+    background-color: green;
+    flex: 1;
+    display: grid;
+    place-items: center;
+    border-radius: 1rem;
+    color: #96939B;
+    background: #2E2E39;
+    font-size: 1.3rem;
+    font-weight: 600;
+    
+}
+
+.apply-now{
+    background-color: #de9b0c;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.apply-now:hover{
+    background-color: #faac04;
+}
+
+
+@media (max-width : 930px) {
+    .jobs-container{
+        grid-template-columns: repeat(2 , 1fr);
+    }    
+}
+
+@media (max-width : 600px) {
+    .jobs-container{
+        grid-template-columns: 1fr;
+    }    
+}
+@media (max-width : 450px) {
+    .jobs-list{
+        padding: 0 1rem;
+    }
+
+    // .button-container{
+    //     display: none;
+    // }
+
+
+    .jobs-list h1{
+    margin-left: 0;
+    }
+
+    .button-container{
+        width: 20rem;
+    }
+
+    .search{
+        padding: 0 0;
+    }
+
+}

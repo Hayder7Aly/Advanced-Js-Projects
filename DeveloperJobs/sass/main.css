@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #faac04;
+  border-radius: 5rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #11121A;
+}
+
+::-moz-selection {
+  background-color: #faac04;
+  color: #fff;
+}
+
+::selection {
+  background-color: #faac04;
+  color: #fff;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  color: #fff;
+  background-color: #11121A;
+}
+
+header {
+  background: #1C1C24;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+header .header-contianer {
+  max-width: 110rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 2.5rem;
+}
+
+.header-contianer .logo {
+  height: 4rem;
+  cursor: pointer;
+}
+
+.header-contianer .logo img {
+  height: 100%;
+  -webkit-filter: invert(1);
+          filter: invert(1);
+}
+
+.search {
+  width: 100%;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.search-container {
+  background-color: #1C1C24;
+  height: 5rem;
+  border-radius: 1rem;
+  border: .1rem solid #222328;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.input-container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.input-container input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  font-weight: 600;
+}
+
+.input-container i {
+  font-size: 1.8rem;
+  margin-left: 2.5rem;
+}
+
+.button-container {
+  background-color: #de9b0c;
+  width: 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+}
+
+.button-container:hover {
+  background-color: #faac04;
+}
+
+.button-container span {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.jobs-list {
+  max-width: 100rem;
+  background-color: #11121A;
+  width: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2.5rem;
+}
+
+.jobs-list h1 {
+  margin: 1rem 0;
+  margin-left: 2.5rem;
+  margin-top: 1rem;
+  font-size: 2rem;
+}
+
+.jobs-container {
+  display: -ms-grid;
+  display: grid;
+  gap: 4rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  background-color: #11121A;
+}
+
+.job-tile {
+  background-color: #1C1C24;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #fff;
+  padding: 3rem;
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  margin-bottom: 2rem;
+}
+
+.job-tile.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-animation: growUp 250ms linear forwards;
+          animation: growUp 250ms linear forwards;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+@-webkit-keyframes growUp {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+@keyframes growUp {
+  0% {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+}
+
+.job-tile.none {
+  display: none;
+}
+
+.job-tile:hover {
+  background-color: #23232b;
+}
+
+.top {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.rolename {
+  padding: 2rem 0rem;
+}
+
+.rolename span {
+  font-size: 1.8rem;
+}
+
+.description {
+  height: 10.5rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.description p {
+  font-size: 1.3rem;
+  color: #96939B;
+  text-overflow: ellipsis;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+  height: 4.5rem;
+  width: 100%;
+}
+
+.button {
+  background-color: green;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: 1rem;
+  color: #96939B;
+  background: #2E2E39;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.apply-now {
+  background-color: #de9b0c;
+  color: #fff;
+  margin-right: 1.5rem;
+}
+
+.apply-now:hover {
+  background-color: #faac04;
+}
+
+@media (max-width: 930px) {
+  .jobs-container {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .jobs-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 450px) {
+  .jobs-list {
+    padding: 0 1rem;
+  }
+  .jobs-list h1 {
+    margin-left: 0;
+  }
+  .button-container {
+    width: 20rem;
+  }
+  .search {
+    padding: 0 0;
+  }
+}
+/*# sourceMappingURL=main.css.map */

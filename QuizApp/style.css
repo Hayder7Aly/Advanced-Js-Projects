@@ -1,0 +1,96 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: 'ubuntu';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: hsl(206, 21%, 94%);
+    background-image: linear-gradient(315deg , hsl(206, 21%, 94%) 0% , #f5f7fa 100% );
+}
+
+#quiz{
+    position: relative;
+}
+
+.quiz-container{
+    background-color: #fff;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem .2rem rgba(100,100,100,.1);
+    width: 60rem;
+    overflow: hidden;
+
+}
+
+.quiz-header{
+    padding: 4rem;
+}
+
+h2{
+    padding: 1rem;
+    text-align: center;
+    margin: 0;
+    font-size: 1.7rem;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+
+}
+
+ul li{
+    font-size: 1.2rem;
+    margin: 1rem;
+
+}
+
+ul li label{
+    cursor: pointer;
+    font-family: 'ubuntu';
+    font-weight: 500;
+    font-size: 1.3rem;
+    padding: 0 .5rem;
+}
+
+button{
+    background-color: #732d91;
+    border: none;
+    color: #fff;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    font-size: 1.3rem;
+    padding: 1rem;
+    font-family: 'ubuntu';
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+
+}
+
+button:hover{
+    opacity: .9;
+}
+
+#result{
+    height: 10rem;
+    margin-top: 2rem;
+}
+
+#reload{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}

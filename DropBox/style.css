@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow: hidden;
+    background: linear-gradient(to top right , rgb(142, 61, 255) 0%,rgb(107, 99, 255) 100%);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+.fill{
+    background-image: url("img/user2.jpg");
+    background-size: 100% 100%;
+    background-position: center center;
+    height: 14.8rem;
+    width: 14.8rem;
+    cursor: pointer;
+}
+
+.empty{
+
+    height: 15rem;
+    width: 15rem;
+    margin: 1rem;
+    border: solid .1rem #000;
+    background-color: #fff;
+
+}
+
+.hold{
+    border: solid .1rem #ccc;
+  
+}
+
+.hovered{
+    background-color: #333;
+    border: .1rem white dashed;
+}
+
+
+@media (max-width:80rem) {
+    body{
+        flex-direction: column;
+    }
+    
+}
